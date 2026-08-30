@@ -1,4 +1,4 @@
-# AI Reconciliation & Categorization Agent
+# TrueBooks
 
 Watch it ingest four inconsistent sources — a bank feed, a Razorpay settlement
 report, a QuickBooks P&L export, and a payroll register — decide what every
