@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.cache/
+.streamlit/
+.DS_Store
+
+# Ignore only regenerable binaries and logs; keep the data and knowledge base visible
+data/*.npy
+data/*.log
+data/real/

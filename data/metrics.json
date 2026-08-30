@@ -1,0 +1,38 @@
+{
+  "model": "mock",
+  "categorization": {
+    "rag_off": {
+      "n": 67,
+      "accuracy": 1.0,
+      "abstention_rate": 0.0,
+      "auto_approve_coverage": 1.0,
+      "auto_approve_accuracy": 1.0,
+      "_confusion": {}
+    },
+    "rag_on": {
+      "n": 67,
+      "accuracy": 1.0,
+      "abstention_rate": 0.0,
+      "auto_approve_coverage": 1.0,
+      "auto_approve_accuracy": 1.0,
+      "_confusion": {}
+    }
+  },
+  "reconciliation": {
+    "engine_summary": {
+      "deposits_examined": 18,
+      "by_status": {
+        "matched": 12,
+        "partial_reserve": 6
+      },
+      "auto_matched_pct": 66.7,
+      "reserve_or_short_held": 94494.96,
+      "expected_cash": 3372889.0100000002,
+      "actual_cash": 3278394.0500000003,
+      "unexplained_variance": 94494.96
+    },
+    "deposits_with_truth": 18,
+    "correct_payout_matches": 18,
+    "match_accuracy": 1.0
+  }
+}

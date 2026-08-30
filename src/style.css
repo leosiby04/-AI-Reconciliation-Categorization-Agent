@@ -1,0 +1,163 @@
+/* ============================================
+   AI Finance Controller — Premium Dark Theme
+   ============================================ */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Global ── */
+html, body, .stApp, [data-testid="stAppViewContainer"],
+[data-testid="stAppViewBlockContainer"] {
+    background: linear-gradient(160deg, #0a0e1a 0%, #111827 50%, #0f172a 100%) !important;
+    color: #e2e8f0 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%) !important;
+    border-right: 1px solid rgba(129, 140, 248, 0.2) !important;
+}
+section[data-testid="stSidebar"] * {
+    color: #cbd5e1 !important;
+}
+
+/* ── Headers ── */
+h1 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    letter-spacing: -0.02em !important;
+}
+
+h2, h3 {
+    font-weight: 600 !important;
+    background: linear-gradient(135deg, #38bdf8, #818cf8) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ── Metrics cards ── */
+[data-testid="stMetric"] {
+    background: rgba(30, 41, 59, 0.7) !important;
+    border: 1px solid rgba(129, 140, 248, 0.15) !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+[data-testid="stMetric"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 30px rgba(129, 140, 248, 0.15), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #94a3b8 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+[data-testid="stMetricValue"] {
+    color: #f1f5f9 !important;
+    font-weight: 700 !important;
+    font-size: 1.8rem !important;
+}
+
+/* ── DataFrames ── */
+[data-testid="stDataFrame"] {
+    border: 1px solid rgba(129, 140, 248, 0.12) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ── Buttons ── */
+.stButton > button {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.55rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.01em !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3) !important;
+}
+.stButton > button:hover {
+    transform: translateY(-1px) scale(1.01) !important;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5) !important;
+}
+.stButton > button:active {
+    transform: translateY(0px) scale(0.99) !important;
+}
+
+/* ── Text Inputs ── */
+.stTextInput input {
+    background: rgba(30, 41, 59, 0.6) !important;
+    border: 1px solid rgba(129, 140, 248, 0.2) !important;
+    color: #f1f5f9 !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 1rem !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+.stTextInput input:focus {
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15) !important;
+}
+
+/* ── Info / Alert boxes ── */
+.stAlert, [data-testid="stAlert"] {
+    background: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    border-radius: 12px !important;
+    color: #e2e8f0 !important;
+}
+
+/* ── Expanders ── */
+[data-testid="stExpander"] {
+    background: rgba(30, 41, 59, 0.4) !important;
+    border: 1px solid rgba(129, 140, 248, 0.1) !important;
+    border-radius: 12px !important;
+}
+
+/* ── Spinner overlay ── */
+.stSpinner > div {
+    border-top-color: #818cf8 !important;
+}
+
+/* ── Captions & small text ── */
+.stCaption, [data-testid="stCaptionContainer"] {
+    color: #64748b !important;
+    font-size: 0.82rem !important;
+}
+
+/* ── Fade-in animation ── */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.main .block-container {
+    animation: slideUp 0.5s ease-out !important;
+}
+
+/* ── Scrollbar styling ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
