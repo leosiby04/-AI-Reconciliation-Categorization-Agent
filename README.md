@@ -1,6 +1,6 @@
 # AI Reconciliation & Categorization Agent
 
-![Dashboard demo](assets/demo.gif)
+
 
 A small, runnable AI system for the messy reality of Razorpay-settled business finance. It takes raw exports—a bank feed, a Razorpay settlement report, a QuickBooks P&L, a payroll register—categorizes every transaction, reconciles bank deposits to Razorpay settlements, and produces an auditable income statement.
 
