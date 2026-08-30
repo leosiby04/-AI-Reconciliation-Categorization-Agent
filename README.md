@@ -12,23 +12,37 @@ mis-categorization is a labelling error the evaluation catches; a
 hallucinated number would silently corrupt the books. So numbers never go
 near the model.
 
-> ⚠️ **Update the numbers below** with your actual run output before
-> submitting — replace every `[N]` placeholder by running
-> `python src/evaluate.py` and reading its printed summary. Don't ship
-> placeholders.
+> ⚠️ **Still pending:** the exception list below needs to be regenerated
+> from a live `evaluate.py` run once it exports structured exception data
+> (record, expected, found, reason). Do not ship illustrative rows.
 
 ---
+
+## Batch size (from `src/generate_data.py`)
+
+| Source | Records |
+|---|---:|
+| Bank feed | **192** |
+| Settlement / payout report | **37** |
+| P&L export (non-blank) | **11** |
+| Payroll register | **6** |
+| **Total across all 4 sources** | **246** |
 
 ## Results (measured against held-out ground truth)
 
 | Metric | Result |
 |---|---|
-| **Total records processed** (bank + settlement + P&L + payroll) | **[N] records** |
 | **Engine auto-match rate** | **[66.7%]** matched automatically; the rest flagged — never guessed |
 | **Reconciliation match accuracy** (on auto-matched records) | **[100%]** ([18]/[18] deposits → correct settlement) |
-| **Categorization accuracy** (offline mock baseline) | **[100%]** |
+| **Categorization accuracy** (offline mock baseline) | **[100%]** — measured on the P&L slice (11 records); see note below |
 | **Categorization lift from KB RAG, real LLM** (`gpt-4o-mini`) | **[+46.4%]** on cryptic vendor memos — see caveat below |
-| **Unresolved / flagged for human review** | **[33.3%]** — sample below |
+| **Unresolved / flagged for human review** | **[33.3%]** — real exception list pending, see below |
+
+**Note on sample sizes:** the 246-record total spans all four sources, but
+categorization accuracy is measured on the subset with ground-truth labels
+(the P&L slice, 11 records) — a 100% result on 11 records is a much smaller
+claim than 100% on 246, and is reported here as such rather than implied to
+span the whole batch.
 
 **Why the categorization numbers look "too clean":** the offline baseline
 runs against a knowledge base generated from the *same* vendor distribution
