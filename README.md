@@ -12,7 +12,7 @@ mis-categorization is a labelling error the evaluation catches; a
 hallucinated number would silently corrupt the books. So numbers never go
 near the model.
 
-> ⚠️ **Still pending:** the exception list below needs to be regenerated
+>  **Still pending:** the exception list below needs to be regenerated
 > from a live `evaluate.py` run once it exports structured exception data
 > (record, expected, found, reason). Do not ship illustrative rows.
 
